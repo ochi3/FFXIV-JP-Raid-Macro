@@ -1,8 +1,5 @@
 name: Deploy to GitHub Pages
 
-permissions:
-  contents: write
-
 on:
   push:
     branches: [main]
@@ -26,6 +23,6 @@ jobs:
       
       - uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GH_PAT }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
           publish_branch: gh-pages
