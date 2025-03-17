@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkFFXIV_JP_Raid_Macro=self.webpackChunkFFXIV_JP_Raid_Macro||[]).push([[9647],{8122:(e,r,a)=>{a.r(r),a.d(r,{default:()=>i});a(6540);var s=a(4164),c=a(1082),u=a(204),d=a(2831),n=a(1410),t=a(4848);function i(e){return(0,t.jsx)(c.e3,{className:(0,s.A)(u.G.wrapper.docsPages),children:(0,t.jsx)(n.A,{children:(0,d.v)(e.route.routes)})})}}}]);

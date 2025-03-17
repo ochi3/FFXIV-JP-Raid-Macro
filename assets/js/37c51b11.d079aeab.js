@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkFFXIV_JP_Raid_Macro=self.webpackChunkFFXIV_JP_Raid_Macro||[]).push([[4790],{5137:a=>{a.exports=JSON.parse('{"metadata":{"permalink":"/FFXIV-JP-Raid-Macro/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);
