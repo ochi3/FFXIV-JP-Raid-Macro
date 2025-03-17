@@ -16,6 +16,7 @@ const config: Config = {
   trailingSlash: false,
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
+  staticDirectories: ['static', 'public'],
 
   i18n: {
     defaultLocale: 'ja',
