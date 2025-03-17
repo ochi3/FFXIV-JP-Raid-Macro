@@ -17,53 +17,7 @@
 /* スライダーセクション */
 .slider-section {
   position: relative;
-}
-
-/* ボタンコンテナ */
-.button-container {
-  margin-bottom: 1.5rem;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.custom-btn {
-  padding: 8px 16px;
-  border: 2px solid var(--ifm-color-primary);
-  border-radius: 25px;
-  background: transparent;
-  color: var(--ifm-color-primary);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-weight: 600;
-  position: relative;
-}
-
-.custom-btn.active {
-  background: var(--ifm-color-primary);
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(var(--ifm-color-primary-rgb), 0.3);
-}
-
-.custom-btn:hover:not(.active) {
-  background: rgba(var(--ifm-color-primary-rgb), 0.1);
-}
-
-.custom-btn[title]:hover::after {
-  content: attr(title);
-  position: absolute;
-  bottom: 120%;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(0,0,0,0.9);
-  color: white;
-  padding: 6px 12px;
-  border-radius: 4px;
-  font-size: 0.9rem;
-  white-space: nowrap;
-  pointer-events: none;
+  padding-top: 50px; /* メインボタンとサブボタンのスペースを確保 */
 }
 
 /* 画像表示 */
@@ -71,112 +25,32 @@
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  margin-top: 5px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--ifm-background-surface-color);
 }
 
 .image-wrapper img {
-  width: 100%;
-  height: 450px;
-  object-fit: cover;
+  max-width: 100%;
+  height: auto;
+  max-height: 450px;
+  object-fit: contain; /* 画像の縦横比を維持 */
+  display: block;
+  will-change: transform, opacity; /* パフォーマンス最適化 */
 }
 
-
-/* レスポンシブ対応 */
-@media (max-width: 996px) {
-  .layout-container {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  
-  .image-wrapper img {
-    height: 300px;
-  }
-  
-  .custom-btn {
-    padding: 6px 12px;
-    font-size: 0.9rem;
-  }
-}
-/* ボタンコンテナ（左詰め） */
-.button-container-left {
-  position: absolute;
-  top: -40px; /* 画像上部に密着 */
-  left: 0;
-  z-index: 10;
-  display: flex;
-  gap: 8px;
-  padding: 0 10px;
-}
-
-/* 四角形ボタンのスタイル */
-.square-btn {
-  width: 40px;
-  height: 40px;
-  border: 2px solid #333; /* 黒色ボーダー */
-  border-radius: 4px;
-  background: #1a1a1a; /* ダークグレー背景 */
-  color: #fff; /* 白文字 */
-  cursor: pointer;
-  font-weight: bold;
-  transition: all 0.2s ease;
-}
-
-.square-btn.active {
-  background: #333; /* アクティブ時の濃いグレー */
-  border-color: #666;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-}
-
-.square-btn:hover:not(.active) {
-  background: #262626; /* ホバー時の明るめグレー */
-  border-color: #555;
-}
-
-/* ダークモード対応 */
-[data-theme='dark'] .square-btn {
-  border-color: #666;
-  background: #2d2d2d;
-}
-
-[data-theme='dark'] .square-btn.active {
-  background: #404040;
-  border-color: #888;
-}
-
-
-/* 画像ラッパーの調整 */
-.image-wrapper {
-  position: relative;
-  margin-top: 5px; /* ボタン分のスペース確保 */
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-/* レスポンシブ対応 */
-@media (max-width: 768px) {
-  .button-container-left {
-    top: -35px;
-    gap: 4px;
-  }
-  
-  .square-btn {
-    width: 35px;
-    height: 35px;
-    font-size: 0.9rem;
-  }
-  
-  .image-wrapper {
-    margin-top: 35px;
-  }
-}
-/* ImageLayoutSlider.css */
 /* メインボタンスタイル */
 .button-container-main {
   position: absolute;
-  top: -40px;
+  top: 0;
   left: 0;
   z-index: 20;
   display: flex;
   gap: 8px;
+  flex-wrap: wrap; /* 小さい画面でも折り返す */
 }
 
 .main-btn {
@@ -188,6 +62,7 @@
   border-radius: 4px;
   cursor: pointer;
   font-weight: bold;
+  transition: background-color 0.2s ease;
 }
 
 .main-btn.active {
@@ -197,11 +72,12 @@
 /* サブボタンスタイル */
 .button-container-sub {
   position: absolute;
-  top: 10px;
+  top: 1;
   left: 0px; /* メインボタンからの距離 */
   z-index: 10;
   display: flex;
   gap: 8px;
+  flex-wrap: wrap; /* 小さい画面でも折り返す */
 }
 
 .sub-btn {
@@ -213,21 +89,79 @@
   border-radius: 4px;
   cursor: pointer;
   font-size: 0.9rem;
+  transition: background-color 0.2s ease;
 }
 
 .sub-btn.active {
   background: #888;
 }
 
-/* レスポンシブ対応 */
-@media (max-width: 768px) {
-  .button-container-sub {
-    left: 90px;
+/* レスポンシブ対応 - タブレット */
+@media (max-width: 996px) {
+  .layout-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
   
-  .sub-btn {
-    width: 50px;
-    height: 25px;
+  .slider-section {
+    padding-top: 45px;
+  }
+  
+  .image-wrapper img {
+    max-height: 400px;
+  }
+  
+  .button-container-sub {
+    left: 140px;
+  }
+}
+
+/* レスポンシブ対応 - モバイル */
+@media (max-width: 768px) {
+  .slider-section {
+    padding-top: 90px; /* ボタンが2行になる可能性があるので高さを増やす */
+  }
+  
+  .image-wrapper img {
+    max-height: 320px;
+  }
+  
+  .button-container-main {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  
+  .button-container-sub {
+    top: 45px; /* メインボタンの下に配置 */
+    left: 0;
+    width: 100%;
+    justify-content: flex-start;
+  }
+  
+  .main-btn, .sub-btn {
+    width: 35px;
+    height: 35px;
     font-size: 0.8rem;
+  }
+}
+
+/* 超小型デバイス用 */
+@media (max-width: 480px) {
+  .slider-section {
+    padding-top: 100px;
+  }
+  
+  .image-wrapper {
+    margin-top: 10px;
+  }
+  
+  .image-wrapper img {
+    max-height: 280px;
+  }
+  
+  .main-btn, .sub-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 0.7rem;
   }
 }
