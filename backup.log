@@ -1,0 +1,232 @@
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Windows の堅牢性の高いファイル コピー                              
+-------------------------------------------------------------------------------
+
+  開始: 2025年3月17日 22:48:26
+   コピー元 : D:\Users\uu\Documents\macro-site\FFXIV-JP-Raid-Macro\
+     コピー先 : D:\Users\uu\Documents\macro-site\FFXIV-JP-Raid-Macro\backup_20250317\
+
+    ファイル: *.*
+	    
+除外ファイル: package-lock.json
+	    
+ 除外ディレクトリ: node_modules
+	    .docusaurus
+	    .git
+	    
+  オプション: *.* /S /E /DCOPY:DA /COPY:DAT /R:1000000 /W:30 
+
+------------------------------------------------------------------------------
+
+	新しいディレクトリ       9	D:\Users\uu\Documents\macro-site\FFXIV-JP-Raid-Macro\
+	  新しいファイル		     265	.gitignore100%  
+	  新しいファイル		       0	backup.log100%  
+	  新しいファイル		    1760	docusaurus.config.ts100%  
+	  新しいファイル		    1233	package.json100%  
+	  新しいファイル		     809	README.md100%  
+	  新しいファイル		    1079	sidebars.ts100%  
+	  新しいファイル		     223	tsconfig.json100%  
+	  新しいファイル		    1620	update.bat100%  
+	新しいディレクトリ       0	D:\Users\uu\Documents\macro-site\FFXIV-JP-Raid-Macro\.github\
+	新しいディレクトリ       1	D:\Users\uu\Documents\macro-site\FFXIV-JP-Raid-Macro\.github\workflows\
+	  新しいファイル		     910	deploy.yml100%  
+	新しいディレクトリ       8	D:\Users\uu\Documents\macro-site\FFXIV-JP-Raid-Macro\backup_20250317\
+	  新しいファイル		     265	.gitignore100%  
+	  新しいファイル		     898	backup.log100%  
+	  新しいファイル		    1760	docusaurus.config.ts100%  
+	  新しいファイル		    1233	package.json100%  
+	  新しいファイル		     809	README.md100%  
+	  新しいファイル		    1079	sidebars.ts100%  
+	  新しいファイル		     223	tsconfig.json100%  
+	  新しいファイル		    1620	update.bat100%  
+	新しいディレクトリ       0	D:\Users\uu\Documents\macro-site\FFXIV-JP-Raid-Macro\backup_20250317\.github\
+	新しいディレクトリ       1	D:\Users\uu\Documents\macro-site\FFXIV-JP-Raid-Macro\backup_20250317\.github\workflows\
+	  新しいファイル		     910	deploy.yml100%  
+	新しいディレクトリ       5	D:\Users\uu\Documents\macro-site\FFXIV-JP-Raid-Macro\blog\
+	  新しいファイル		     324	2019-05-28-first-blog-post.md100%  
+	  新しいファイル		    3166	2019-05-29-long-blog-post.md100%  
+	  新しいファイル		     536	2021-08-01-mdx-blog-post.mdx100%  
+	  新しいファイル		     637	authors.yml100%  
+	  新しいファイル		     366	tags.yml100%  
+	新しいディレクトリ       2	D:\Users\uu\Documents\macro-site\FFXIV-JP-Raid-Macro\blog\2021-08-26-welcome\
+	  新しいファイル		   96122	docusaurus-plushie-banner.jpeg100%  
+	  新しいファイル		     875	index.md100%  
+	新しいディレクトリ       8	D:\Users\uu\Documents\macro-site\FFXIV-JP-Raid-Macro\build\
+	  新しいファイル		       0	.nojekyll
+	  新しいファイル		    4732	404.html100%  
+	  新しいファイル		   11419	AAC_クルーザー級.html100%  
+	  新しいファイル		   39555	blog.html100%  
+	  新しいファイル		   10898	fru.html100%  
+	  新しいファイル		   10946	index.html100%  
+	  新しいファイル		    4773	markdown-page.html100%  
+	  新しいファイル		    4949	sitemap.xml100%  
+	新しいディレクトリ       4	D:\Users\uu\Documents\macro-site\FFXIV-JP-Raid-Macro\build\AAC_クルーザー級\
+	  新しいファイル		   14181	m1.html100%  
+	  新しいファイル		   14196	m2.html100%  
+	  新しいファイル		   14196	m3.html100%  
+	  新しいファイル		   14169	m4.html100%  
+	新しいディレクトリ       4	D:\Users\uu\Documents\macro-site\FFXIV-JP-Raid-Macro\build\AAC_ライトヘビー級\
+	  新しいファイル		   15165	m1.html100%  
+	  新しいファイル		   14826	m2.html100%  
+	  新しいファイル		   16368	m3.html100%  
+	  新しいファイル		   18469	m4.html100%  
+	新しいディレクトリ       0	D:\Users\uu\Documents\macro-site\FFXIV-JP-Raid-Macro\build\assets\
+	新しいディレクトリ       1	D:\Users\uu\Documents\macro-site\FFXIV-JP-Raid-Macro\build\assets\css\
+	  新しいファイル		   74377	styles.0b36814a.css100%  
+	新しいディレクトリ       1	D:\Users\uu\Documents\macro-site\FFXIV-JP-Raid-Macro\build\assets\images\
+	  新しいファイル		   96122	docusaurus-plushie-banner-a60f7593abca1e3eef26a9afa244e4fb.jpeg100%  
+	新しいディレクトリ      59	D:\Users\uu\Documents\macro-site\FFXIV-JP-Raid-Macro\build\assets\js\
+	  新しいファイル		    7448	01a85c17.1feb90fd.js100%  
+	  新しいファイル		    4353	0c46db74.13155dab.js100%  
+	  新しいファイル		    3756	0eda7882.fa6f2c5f.js100%  
+	  新しいファイル		     794	1172dd77.e2383b5b.js100%  
+	  新しいファイル		    4376	1785ac40.29c2514a.js100%  
+	  新しいファイル		   16067	17896441.c32458a4.js100%  
+	  新しいファイル		    6673	1f391b9e.999892c7.js100%  
+	  新しいファイル		   21771	2465.6bd8db40.js100%  
+	  新しいファイル		     502	2492bd6b.4b24ec85.js100%  
+	  新しいファイル		    6112	2fa7267d.2f492251.js100%  
+	  新しいファイル		    1304	3042.8913d172.js100%  
+	  新しいファイル		    9022	33fc5bb8.209ab964.js100%  
+	  新しいファイル		     201	36994c47.9f21245c.js100%  
+	  新しいファイル		     300	37c51b11.d079aeab.js100%  
+	  新しいファイル		    1482	393be207.d594e57e.js100%  
+	  新しいファイル		     649	48647adc.9407551c.js100%  
+	  新しいファイル		    1692	4edc808e.3df883c9.js100%  
+	  新しいファイル		    3412	57010469.906650bf.js100%  
+	  新しいファイル		    2988	59362658.f4815125.js100%  
+	  新しいファイル		     498	5c41ae78.1391becd.js100%  
+	  新しいファイル		     366	5e95c892.a9284e94.js100%  
+	  新しいファイル		    2316	621db11d.0f8df8b9.js100%  
+	  新しいファイル		   10428	6875c492.2f9fe809.js100%  
+	  新しいファイル		    5944	73664a40.0829585e.js100%  
+	  新しいファイル		    3092	7661071f.f5a03eba.js100%  
+	  新しいファイル		    2762	776d57c1.1d69b33b.js100%  
+	  新しいファイル		   22268	7982.73c2bb34.js100%  
+	  新しいファイル		     697	814f3328.d5289be3.js100%  
+	  新しいファイル		    2552	8717b14a.b8e06ed2.js100%  
+	  新しいファイル		     514	9259d1c1.d7f96810.js100%  
+	  新しいファイル		    2625	925b3f96.2a9b5838.js100%  
+	  新しいファイル		     920	980c659f.130c37b7.js100%  
+	  新しいファイル		    5682	986c111d.0328b80c.js100%  
+	  新しいファイル		    2094	9e4087bc.b896b647.js100%  
+	  新しいファイル		    7513	a6aa9e1f.d05a738b.js100%  
+	  新しいファイル		     202	a7456010.528f01ce.js100%  
+	  新しいファイル		   10699	a74e3852.8569c33a.js100%  
+	  新しいファイル		     746	a7bd4aaa.504ac0ac.js100%  
+	  新しいファイル		   11376	a94703ab.e6cb85a2.js100%  
+	  新しいファイル		     201	aba21aa0.4585eb17.js100%  
+	  新しいファイル		     262	acecf23e.84919081.js100%  
+	  新しいファイル		    7621	b2be26fe.1455b542.js100%  
+	  新しいファイル		    7452	b9029fc9.5686460b.js100%  
+	  新しいファイル		    2963	c75662a8.7810567e.js100%  
+	  新しいファイル		     522	c7698acf.7a004d41.js100%  
+	  新しいファイル		   13172	ccc49370.1af0bcad.js100%  
+	  新しいファイル		    7453	d1f8e873.6a11ceda.js100%  
+	  新しいファイル		    4329	d5cb4218.5dba3342.js100%  
+	  新しいファイル		    4597	d7f7ccb6.451b4abc.js100%  
+	  新しいファイル		    4329	d9f32620.e56b5c7c.js100%  
+	  新しいファイル		    7452	dcdc5704.8cb476d3.js100%  
+	  新しいファイル		    2848	e273c56f.0dd32e08.js100%  
+	  新しいファイル		    7452	f15515d1.8a57c3ee.js100%  
+	  新しいファイル		     644	f2b777a6.4658f97b.js100%  
+	  新しいファイル		    4376	f4199251.2698aea9.js100%  
+	  新しいファイル		    2631	f4f34a3a.204652d6.js100%  
+	  新しいファイル		  458489	main.8bc3d35a.js 28%   57%   85%  100%  
+	  新しいファイル		    1821	main.8bc3d35a.js.LICENSE.txt100%  
+	  新しいファイル		    6009	runtime~main.5ea90799.js100%  
+	新しいディレクトリ       9	D:\Users\uu\Documents\macro-site\FFXIV-JP-Raid-Macro\build\blog\
+	  新しいファイル		    5523	archive.html100%  
+	  新しいファイル		   11332	atom.xml100%  
+	  新しいファイル		   14110	authors.html100%  
+	  新しいファイル		   16792	first-blog-post.html100%  
+	  新しいファイル		   14731	long-blog-post.html100%  
+	  新しいファイル		   16362	mdx-blog-post.html100%  
+	  新しいファイル		   10677	rss.xml100%  
+	  新しいファイル		    6694	tags.html100%  
+	  新しいファイル		   17893	welcome.html100%  
+	新しいディレクトリ       2	D:\Users\uu\Documents\macro-site\FFXIV-JP-Raid-Macro\build\blog\authors\
+	  新しいファイル		   37171	all-sebastien-lorber-articles.html100%  
+	  新しいファイル		   33156	yangshun.html100%  
+	新しいディレクトリ       4	D:\Users\uu\Documents\macro-site\FFXIV-JP-Raid-Macro\build\blog\tags\
+	  新しいファイル		   36998	docusaurus.html100%  
+	  新しいファイル		   15945	facebook.html100%  
+	  新しいファイル		   20524	hello.html100%  
+	  新しいファイル		   15484	hola.html100%  
+	新しいディレクトリ       5	D:\Users\uu\Documents\macro-site\FFXIV-JP-Raid-Macro\build\fru\
+	  新しいファイル		   18417	P1.html100%  
+	  新しいファイル		   13811	P2.html100%  
+	  新しいファイル		   13811	P3.html100%  
+	  新しいファイル		   13811	P4.html100%  
+	  新しいファイル		   13811	P5.html100%  
+	新しいディレクトリ       2	D:\Users\uu\Documents\macro-site\FFXIV-JP-Raid-Macro\build\img\
+	  新しいファイル		    4286	favicon.ico100%  
+	  新しいファイル		  119003	logo.svg100%  
+	新しいディレクトリ       5	D:\Users\uu\Documents\macro-site\FFXIV-JP-Raid-Macro\build\img\fru_p1\
+	  新しいファイル		  191447	P1_2.png 68%  100%  
+	  新しいファイル		  205498	P1_3_f.png 63%  100%  
+	  新しいファイル		  222316	P1_3_l.png 58%  100%  
+	  新しいファイル		  190197	P1_4.png 68%  100%  
+	  新しいファイル		  146868	基本散開.png 89%  100%  
+	新しいディレクトリ       1	D:\Users\uu\Documents\macro-site\FFXIV-JP-Raid-Macro\docs\
+	  新しいファイル		      52	index.mdx100%  
+	新しいディレクトリ       5	D:\Users\uu\Documents\macro-site\FFXIV-JP-Raid-Macro\docs\AAC_CW\
+	  新しいファイル		     181	index.md100%  
+	  新しいファイル		     707	m1.md100%  
+	  新しいファイル		     707	m2.md100%  
+	  新しいファイル		     707	m3.md100%  
+	  新しいファイル		     707	m4.md100%  
+	新しいディレクトリ       4	D:\Users\uu\Documents\macro-site\FFXIV-JP-Raid-Macro\docs\AAC_LH\
+	  新しいファイル		     842	m1.md100%  
+	  新しいファイル		     625	m2.md100%  
+	  新しいファイル		    1277	m3.md100%  
+	  新しいファイル		    1970	m4.md100%  
+	新しいディレクトリ       6	D:\Users\uu\Documents\macro-site\FFXIV-JP-Raid-Macro\docs\fru\
+	  新しいファイル		     301	index.mdx100%  
+	  新しいファイル		    2474	P1.md100%  
+	  新しいファイル		    2586	P2.md100%  
+	  新しいファイル		    2586	P3.md100%  
+	  新しいファイル		    2586	P4.md100%  
+	  新しいファイル		    2586	P5.md100%  
+	新しいディレクトリ       0	D:\Users\uu\Documents\macro-site\FFXIV-JP-Raid-Macro\src\
+	新しいディレクトリ       5	D:\Users\uu\Documents\macro-site\FFXIV-JP-Raid-Macro\src\components\
+	  新しいファイル		     484	ImageLayout.css100%  
+	  新しいファイル		     458	ImageLayout.tsx100%  
+	  新しいファイル		    4541	ImageLayoutSlider.css100%  
+	  新しいファイル		    4472	ImageLayoutSlider.tsx100%  
+	  新しいファイル		     984	SafeFrame.tsx100%  
+	新しいディレクトリ       2	D:\Users\uu\Documents\macro-site\FFXIV-JP-Raid-Macro\src\components\HomepageFeatures\
+	  新しいファイル		    1994	index.tsx100%  
+	  新しいファイル		     149	styles.module.css100%  
+	新しいディレクトリ       1	D:\Users\uu\Documents\macro-site\FFXIV-JP-Raid-Macro\src\css\
+	  新しいファイル		    1621	custom.css100%  
+	新しいディレクトリ       2	D:\Users\uu\Documents\macro-site\FFXIV-JP-Raid-Macro\src\pages\
+	  新しいファイル		     443	index.module.css100%  
+	  新しいファイル		     130	markdown-page.md100%  
+	新しいディレクトリ       0	D:\Users\uu\Documents\macro-site\FFXIV-JP-Raid-Macro\src\remark\
+	新しいディレクトリ       1	D:\Users\uu\Documents\macro-site\FFXIV-JP-Raid-Macro\static\
+	  新しいファイル		       0	.nojekyll
+	新しいディレクトリ       2	D:\Users\uu\Documents\macro-site\FFXIV-JP-Raid-Macro\static\img\
+	  新しいファイル		    4286	favicon.ico100%  
+	  新しいファイル		  119003	logo.svg100%  
+	新しいディレクトリ       5	D:\Users\uu\Documents\macro-site\FFXIV-JP-Raid-Macro\static\img\fru_p1\
+	  新しいファイル		  146868	P1_1.png 89%  100%  
+	  新しいファイル		  191447	P1_2.png 68%  100%  
+	  新しいファイル		  205498	P1_3_f.png 63%  100%  
+	  新しいファイル		  222316	P1_3_l.png 58%  100%  
+	  新しいファイル		  190197	P1_4.png 68%  100%  
+
+------------------------------------------------------------------------------
+
+                  合計     コピー済み      スキップ       不一致        失敗    Extras
+   ディレクトリ:        37        34         3         0         0         0
+     ファイル:       164       163         1         0         0         0
+      バイト:    4.23 m    3.59 m   649.0 k         0         0         0
+       時刻:   0:00:00   0:00:00                       0:00:00   0:00:00
+
+
+       速度:             4702412 バイト/秒
+       速度:             269.074 MB/分
+   終了: 2025年3月17日 22:48:27
+

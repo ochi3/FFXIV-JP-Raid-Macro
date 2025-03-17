@@ -1,0 +1,24 @@
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Windows の堅牢性の高いファイル コピー                              
+-------------------------------------------------------------------------------
+
+  開始: 2025年3月17日 22:48:26
+   コピー元 : D:\Users\uu\Documents\macro-site\FFXIV-JP-Raid-Macro\
+     コピー先 : D:\Users\uu\Documents\macro-site\FFXIV-JP-Raid-Macro\backup_20250317\
+
+    ファイル: *.*
+	    
+除外ファイル: package-lock.json
+	    
+ 除外ディレクトリ: node_modules
+	    .docusaurus
+	    .git
+	    
+  オプション: *.* /S /E /DCOPY:DA /COPY:DAT /R:1000000 /W:30 
+
+------------------------------------------------------------------------------
+
+	新しいディレクトリ       9	D:\Users\uu\Documents\macro-site\FFXIV-JP-Raid-Macro\
+	  新しいファイル		     265	.gitignore100%  
+	  新しいファイル		       0	backup.log
