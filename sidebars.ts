@@ -35,9 +35,9 @@ export default {
       label: '絶 もう一つの未来',
       link: {
         type: 'doc', // ドキュメントリンクタイプ
-        id: '絶もう一つの未来/index' // 対応するドキュメントID
+        id: 'fru/index' // 対応するドキュメントID
       },
-      items: ['絶もう一つの未来/P1'],
+      items: ['fru/P1'],
     },
   ],
 };
