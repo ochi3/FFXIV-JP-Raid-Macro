@@ -1,0 +1,233 @@
+/* メインレイアウト */
+.layout-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+/* テキストエリア */
+.text-content {
+  padding: 1.5rem;
+  background: var(--ifm-background-surface-color);
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+/* スライダーセクション */
+.slider-section {
+  position: relative;
+}
+
+/* ボタンコンテナ */
+.button-container {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.custom-btn {
+  padding: 8px 16px;
+  border: 2px solid var(--ifm-color-primary);
+  border-radius: 25px;
+  background: transparent;
+  color: var(--ifm-color-primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  position: relative;
+}
+
+.custom-btn.active {
+  background: var(--ifm-color-primary);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(var(--ifm-color-primary-rgb), 0.3);
+}
+
+.custom-btn:hover:not(.active) {
+  background: rgba(var(--ifm-color-primary-rgb), 0.1);
+}
+
+.custom-btn[title]:hover::after {
+  content: attr(title);
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.9);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+/* 画像表示 */
+.image-wrapper {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+}
+
+
+/* レスポンシブ対応 */
+@media (max-width: 996px) {
+  .layout-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .image-wrapper img {
+    height: 300px;
+  }
+  
+  .custom-btn {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+}
+/* ボタンコンテナ（左詰め） */
+.button-container-left {
+  position: absolute;
+  top: -40px; /* 画像上部に密着 */
+  left: 0;
+  z-index: 10;
+  display: flex;
+  gap: 8px;
+  padding: 0 10px;
+}
+
+/* 四角形ボタンのスタイル */
+.square-btn {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #333; /* 黒色ボーダー */
+  border-radius: 4px;
+  background: #1a1a1a; /* ダークグレー背景 */
+  color: #fff; /* 白文字 */
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.square-btn.active {
+  background: #333; /* アクティブ時の濃いグレー */
+  border-color: #666;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.square-btn:hover:not(.active) {
+  background: #262626; /* ホバー時の明るめグレー */
+  border-color: #555;
+}
+
+/* ダークモード対応 */
+[data-theme='dark'] .square-btn {
+  border-color: #666;
+  background: #2d2d2d;
+}
+
+[data-theme='dark'] .square-btn.active {
+  background: #404040;
+  border-color: #888;
+}
+
+
+/* 画像ラッパーの調整 */
+.image-wrapper {
+  position: relative;
+  margin-top: 5px; /* ボタン分のスペース確保 */
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .button-container-left {
+    top: -35px;
+    gap: 4px;
+  }
+  
+  .square-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 0.9rem;
+  }
+  
+  .image-wrapper {
+    margin-top: 35px;
+  }
+}
+/* ImageLayoutSlider.css */
+/* メインボタンスタイル */
+.button-container-main {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  z-index: 20;
+  display: flex;
+  gap: 8px;
+}
+
+.main-btn {
+  width: 40px;
+  height: 40px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.main-btn.active {
+  background: #666;
+}
+
+/* サブボタンスタイル */
+.button-container-sub {
+  position: absolute;
+  top: 10px;
+  left: 0px; /* メインボタンからの距離 */
+  z-index: 10;
+  display: flex;
+  gap: 8px;
+}
+
+.sub-btn {
+  width: 40px;
+  height: 40px;
+  background: #444;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.sub-btn.active {
+  background: #888;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .button-container-sub {
+    left: 90px;
+  }
+  
+  .sub-btn {
+    width: 50px;
+    height: 25px;
+    font-size: 0.8rem;
+  }
+}
