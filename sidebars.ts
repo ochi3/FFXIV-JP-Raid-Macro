@@ -14,16 +14,16 @@ export default {
     {
       type: 'category',
       label: 'ライトヘビー級',
-      items: ['AAC_ライトヘビー級/m1', 'AAC_ライトヘビー級/m2', 'AAC_ライトヘビー級/m3', 'AAC_ライトヘビー級/m4'],
+      items: ['AAC_LH/m1', 'AAC_LH/m2', 'AAC_LH/m3', 'AAC_LH/m4'],
     },
     {
       type: 'category',
       label: 'クルーザー級',
       link: {
         type: 'doc', // ドキュメントリンクタイプ
-        id: 'AAC_クルーザー級/index' // 対応するドキュメントID
+        id: 'AAC_CW/index' // 対応するドキュメントID
       },
-      items: ['AAC_クルーザー級/m1', 'AAC_クルーザー級/m2', 'AAC_クルーザー級/m3', 'AAC_クルーザー級/m4'],
+      items: ['AAC_CW/m1', 'AAC_CW/m2', 'AAC_CW/m3', 'AAC_CW/m4'],
     },
     {
       type: 'html',
