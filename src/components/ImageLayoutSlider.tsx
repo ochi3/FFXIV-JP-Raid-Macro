@@ -1,5 +1,6 @@
 // src/components/ImageLayoutSlider.tsx
 import React, { useState } from 'react';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import './ImageLayoutSlider.css';
 
 interface SubButton {
@@ -24,6 +25,26 @@ export default function ImageLayoutSlider({ children, buttons }: Props) {
 
   const currentButton = buttons[mainIndex];
   const hasSubButtons = currentButton.subButtons?.length > 0;
+
+  // 画像パスを正しく解決する関数
+  const resolveImagePath = (path: string) => {
+    // 既に@siteや他の特殊な形式で始まっていない場合のみuseBaseUrlを適用
+    if (path.startsWith('@site') || path.startsWith('~') || path.startsWith('http')) {
+      return path;
+    }
+    
+    // 先頭の/を削除（useBaseUrlが自動的に追加するため）
+    const normalizedPath = path.startsWith('/') ? path.substring(1) : path;
+    return useBaseUrl(`img/${normalizedPath}`);
+  };
+
+  // 現在表示すべき画像のパスを取得
+  const currentImagePath = hasSubButtons 
+    ? currentButton.subButtons[subIndex].image
+    : currentButton.image;
+
+  // 画像パスを正しく解決
+  const resolvedImagePath = currentImagePath ? resolveImagePath(currentImagePath) : '';
 
   return (
     <div className="layout-container">
@@ -63,14 +84,17 @@ export default function ImageLayoutSlider({ children, buttons }: Props) {
 
         {/* 画像表示 */}
         <div className="image-wrapper">
-          <img
-            src={
-              hasSubButtons 
-                ? currentButton.subButtons[subIndex].image
-                : currentButton.image
-            }
-            alt="Content preview"
-          />
+          {resolvedImagePath && (
+            <img
+              src={resolvedImagePath}
+              alt={`Content preview for ${currentButton.label}`}
+              onError={(e) => {
+                console.error(`Failed to load image: ${resolvedImagePath}`);
+                e.currentTarget.src = useBaseUrl('img/fallback-image.png');
+                e.currentTarget.alt = 'Image not found';
+              }}
+            />
+          )}
         </div>
       </div>
     </div>
