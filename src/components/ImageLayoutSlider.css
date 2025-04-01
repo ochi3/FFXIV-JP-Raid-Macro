@@ -1,3 +1,14 @@
+/* 変数定義 */
+:root {
+  --main-btn-bg: #333;
+  --main-btn-bg-active: #666;
+  --sub-btn-bg: #444;
+  --sub-btn-bg-active: #888;
+  --box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  --transition-duration: 0.2s;
+  --transition-ease: ease;
+}
+
 /* メインレイアウト */
 .layout-container {
   display: grid;
@@ -11,7 +22,7 @@
   padding: 1.5rem;
   background: var(--ifm-background-surface-color);
   border-radius: 10px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* スライダーセクション */
@@ -24,13 +35,15 @@
 .image-wrapper {
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  box-shadow: var(--box-shadow);
   margin-top: 5px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: var(--ifm-background-surface-color);
+  position: relative;
+  min-height: 320px; /* 最小の高さを設定して、高さが急に変わらないようにする */
 }
 
 .image-wrapper img {
@@ -39,7 +52,7 @@
   max-height: 450px;
   object-fit: contain; /* 画像の縦横比を維持 */
   display: block;
-  will-change: transform, opacity; /* パフォーマンス最適化 */
+  transition: opacity var(--transition-duration) var(--transition-ease); /* スムーズな遷移のためのトランジション */
 }
 
 /* メインボタンスタイル */
@@ -56,17 +69,17 @@
 .main-btn {
   width: 40px;
   height: 40px;
-  background: #333;
+  background: var(--main-btn-bg);
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   font-weight: bold;
-  transition: background-color 0.2s ease;
+  transition: background-color var(--transition-duration) var(--transition-ease);
 }
 
 .main-btn.active {
-  background: #666;
+  background: var(--main-btn-bg-active);
 }
 
 /* サブボタンスタイル */
@@ -83,17 +96,17 @@
 .sub-btn {
   width: 40px;
   height: 40px;
-  background: #444;
+  background: var(--sub-btn-bg);
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   font-size: 0.9rem;
-  transition: background-color 0.2s ease;
+  transition: background-color var(--transition-duration) var(--transition-ease);
 }
 
 .sub-btn.active {
-  background: #888;
+  background: var(--sub-btn-bg-active);
 }
 
 /* レスポンシブ対応 - タブレット */
@@ -105,6 +118,10 @@
   
   .slider-section {
     padding-top: 45px;
+  }
+  
+  .image-wrapper {
+    min-height: 400px;
   }
   
   .image-wrapper img {
@@ -164,30 +181,6 @@
     height: 30px;
     font-size: 0.7rem;
   }
-}
-
-/* 画像表示 */
-.image-wrapper {
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-  margin-top: 5px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--ifm-background-surface-color);
-  position: relative;
-  min-height: 320px; /* 最小の高さを設定して、高さが急に変わらないようにする */
-}
-
-.image-wrapper img {
-  max-width: 100%;
-  height: auto;
-  max-height: 450px;
-  object-fit: contain; /* 画像の縦横比を維持 */
-  display: block;
-  transition: opacity 0.3s ease; /* スムーズな遷移のためのトランジション */
 }
 
 /* 画像サイズを指定 (640x640のサイズに最適化) */

@@ -1,25 +1,46 @@
-/* src/components/ImageLayout.css */
-.image-layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    align-items: center;
-    margin: 2rem 0;
+/* src/css/ImageLayout.css */
+.image-layout-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 2rem 0;
+  align-items: start;
+  direction: rtl;
+}
+
+/* 子要素の方向を元に戻す */
+.image-content, 
+.layout-description {
+  direction: ltr;
+}
+
+/* モバイル表示時はデフォルト順序に */
+@media (max-width: 996px) {
+  .image-layout-container {
+    direction: ltr;
+  }
+}
+
+.main-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 0px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.layout-description {
+  padding: 1rem;
+  background: var(--ifm-background-surface-color);
+  border-radius: 8px;
+}
+
+@media (max-width: 996px) {
+  .image-layout-container {
+    grid-template-columns: 1fr;
   }
   
-  .image-container img {
+  .main-image {
     max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
-  
-  @media (max-width: 996px) {
-    .image-layout {
-      grid-template-columns: 1fr;
-    }
-    
-    .image-container {
-      order: -1;
-    }
-  }
+}
