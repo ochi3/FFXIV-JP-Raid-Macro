@@ -18,7 +18,7 @@ export default {
         type: 'doc', // ドキュメントリンクタイプ
         id: 'AAC_CW/index' // 対応するドキュメントID
       },
-      items: ['AAC_CW/m1', 'AAC_CW/m2', 'AAC_CW/m3', 'AAC_CW/m4'],
+      items: ['AAC_CW/m5', 'AAC_CW/m6', 'AAC_CW/m7', 'AAC_CW/m8'],
     },
   ],
 };
