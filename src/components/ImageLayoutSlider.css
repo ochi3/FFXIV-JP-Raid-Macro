@@ -133,57 +133,79 @@
   }
 }
 
-/* レスポンシブ対応 - モバイル */
+/* モバイル対応部分を以下のように修正 */
+
 @media (max-width: 768px) {
-  .slider-section {
-    padding-top: 90px; /* ボタンが2行になる可能性があるので高さを増やす */
-  }
-  
+  /* 画像表示の統一設定 */
   .image-wrapper img {
-    max-height: 320px;
+    width: 100% !important; /* 幅をコンテナいっぱいに */
+    height: auto !important; /* 高さを自動調整 */
+    max-width: 100%; /* 最大幅を制限 */
+    max-height: 450px; /* 最大高さを設定 */
+    object-fit: contain; /* 画像全体を表示 */
+    margin: 0;
   }
-  
-  .button-container-main {
+
+  /* グリッドレイアウト調整 */
+  .horizontal-images {
+    grid-template-columns: 1fr;
+    justify-items: stretch; /* コンテナ幅いっぱいに */
+  }
+
+  /* 画像コンテナの幅制限解除 */
+  .horizontal-images figure {
+    max-width: none;
     width: 100%;
-    justify-content: flex-start;
   }
-  
+
+  /* ボタン配置の最適化 */
+  .button-container-main,
   .button-container-sub {
-    top: 45px; /* メインボタンの下に配置 */
-    left: 0;
-    width: 100%;
-    justify-content: flex-start;
+    position: static;
+    flex-wrap: nowrap; /* 横スクロール可能に */
+    overflow-x: auto;
+    padding: 8px 0;
+    -webkit-overflow-scrolling: touch;
   }
-  
-  .main-btn, .sub-btn {
-    width: 35px;
-    height: 35px;
-    font-size: 0.8rem;
-  }
-}
 
-/* 超小型デバイス用 */
-@media (max-width: 480px) {
+  .main-btn,
+  .sub-btn {
+    width: 42px;
+    height: 42px;
+    font-size: 0.9rem;
+    padding: 5px;
+  }
+
+  /* スライダーセクション調整 */
   .slider-section {
-    padding-top: 100px;
+    padding-top: 0;
+    order: -1; /* 画像をテキストの上に移動 */
   }
-  
-  .image-wrapper {
-    margin-top: 10px;
+
+  /* レイアウトコンテナ調整 */
+  .layout-container {
+    gap: 1rem;
+    margin: 1rem 0;
   }
-  
-  .image-wrapper img {
-    max-height: 280px;
-  }
-  
-  .main-btn, .sub-btn {
-    width: 30px;
-    height: 30px;
-    font-size: 0.7rem;
+
+  /* テキストエリア調整 */
+  .text-content {
+    padding: 1rem;
   }
 }
 
-/* 画像サイズを指定 (640x640のサイズに最適化) */
+/* タッチデバイス向け微調整 */
+@media (hover: none) and (pointer: coarse) {
+  .image-wrapper img {
+    max-height: 60vh; /* 画面高さの60%まで */
+  }
+  
+  .main-btn,
+  .sub-btn {
+    width: 42px;
+    height: 42px;
+  }
+}/* 画像サイズを指定 (640x640のサイズに最適化) */
 @media (min-width: 1200px) {
   .image-wrapper {
     min-height: 450px;
@@ -216,3 +238,4 @@
   overflow: hidden;
   z-index: -1;
 }
+

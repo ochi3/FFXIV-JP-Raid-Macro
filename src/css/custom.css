@@ -67,9 +67,10 @@
 /* src/css/custom.css */
 .horizontal-images {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 1.5rem;
-  margin: 2rem 0;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+  gap: 1rem;
+  margin: 1rem 0; /* 余白を減らす */
+  grid-auto-rows: min-content; /* 高さを内容に合わせる */
 }
 
 .horizontal-images figure {
@@ -82,6 +83,7 @@
 .horizontal-images img {
   width: 100%;
   height: 450px;
+  min-height: 200px; /* 最小高さを設定 */
   object-fit: contain; /* 画像全体を表示 */
   transition: transform 0.3s ease;
 }
@@ -94,12 +96,32 @@
   background: var(--ifm-background-surface-color);
 }
 
+/* モバイル表示の最適化 */
 @media (max-width: 768px) {
   .horizontal-images {
     grid-template-columns: 1fr;
+    gap: 0.5rem; /* 余白をさらに減らす */
+    margin: 0.5rem 0;
+  }
+
+  .horizontal-images img {
+    min-height: 250px; /* モバイルで高さを拡大 */
+    object-fit: contain; /* 画像全体を表示 */
   }
   
-  .horizontal-images img {
-    height: 200px;
+  .horizontal-images figcaption {
+    font-size: 1rem; /* キャプション文字を大きく */
   }
+}
+
+/* タッチデバイス向け拡大 */
+@media (hover: none) and (pointer: coarse) {
+  .horizontal-images img {
+    min-height: 300px;
+  }
+}
+/* 画像とキャプションの間隔調整 */
+.horizontal-images figure > * {
+  margin-top: 0;
+  margin-bottom: 0;
 }
