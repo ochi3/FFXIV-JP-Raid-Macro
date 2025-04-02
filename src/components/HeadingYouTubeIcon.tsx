@@ -48,8 +48,6 @@ export default function YouTubeInline({ videoId, startTime = 0 }: Props) {
             style={{
               width: '80%',
               height: '80%',
-              maxWidth: '800px',
-              maxHeight: '600px'
             }}
           >
             <iframe
