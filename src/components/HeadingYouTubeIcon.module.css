@@ -1,0 +1,49 @@
+/* src/components/HeadingYouTubeIcon.module.css */
+.container {
+    margin: 2rem 0;
+}
+
+.headingWrapper {
+    display: flex;
+    justify-content: space-between; /* 要素を両端に配置 */
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+  }
+  
+  .heading {
+    margin: 0;
+    flex-grow: 1; /* 見出しが残りのスペースを占有 */
+  }
+
+.h2 {
+    font-size: 2rem;
+    border-bottom: 2px solid var(--ifm-color-primary-lightest);
+    padding-bottom: 0.3rem;
+}
+
+.h3 {
+    font-size: 1.5rem;
+}
+
+.h4 {
+    font-size: 1.25rem;
+}
+
+.iconWrapper {
+    cursor: pointer;
+    color: var(--ifm-color-primary);
+    transition: transform 0.2s ease;
+    display: flex;
+    align-items: center;
+}
+
+.iconWrapper:hover {
+    color: var(--ifm-color-primary-dark);
+    transform: scale(1.1);
+}
+
+.icon {
+    width: 1.5em;
+    height: 1.5em;
+}
