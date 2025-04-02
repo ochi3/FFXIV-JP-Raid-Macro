@@ -1,35 +1,237 @@
 import ImageLayoutSlider from '@site/src/components/ImageLayoutSlider';
+import HorizontalImages from '@site/src/components/HorizontalImages';
+import ImageLayout from '@site/src/components/ImageLayout';
 
-# [未]クルーザー級　2層
+# クルーザー級　2層
 
 ##  マクロ
 ```
 まくろ
 ```
-## テンプレート
+## カラーライオット
+<ImageLayout src="img/m6/1.png" alt="カラーライオット">
 
+タンク強攻撃
+
+近いプレイヤーに1発  
+遠いプレイヤーに1発  
+
+上に向けた色が近い人  
+下に向けた色が遠い人  
+
+タンク以外はタゲサ?
+</ImageLayout>
+
+## カラークラッシュ
+2発なら4:4  
+4発ならペア
+
+## ダブルグラフィティ
+<HorizontalImages
+  images={[
+    'img/m6/2.png',
+    'img/m6/3.png'
+  ]}
+  captions={[
+    'モルボル-奥義範囲',
+    'サキュバス-円範囲'
+  ]}
+/>
+
+## ねばねばムース
+近い方に行く
+<HorizontalImages
+  images={[
+    'img/m6/4.png',
+    'img/m6/5.png'
+  ]}
+  captions={[
+    '1',
+    '2'
+  ]}
+/>
+
+## ランドスケープ　砂漠
 <ImageLayoutSlider
   buttons={[
-    { label: '1', image: '/img/fru_p1/P1_1.png' },
-    { label: '2', image: '/img/fru_p1/P1_2.png' },
-    { 
-      label: '3',
-      subButtons: [
-        { label: '炎', image: '/img/fru_p1/P1_3_f.png' },
-        { label: '雷', image: '/img/fru_p1/P1_3_l.png' }
-      ]
-    },
-    { label: '4', image: '/img/fru_p1/P1_4.png' },
-    { label: '4', image: '/img/fru_p1/P1_2.png' }
-
+    { label: '1', image: '/img/m6/6.png' },
+    { label: '2', image: '/img/m6/7.png' },
+    { label: '3', image: '/img/m6/9.png' }
   ]}
 >
+1. **サボテンを避けた後に早デバフ対象者は北へ  
+頭割りはちょい南**
 
-1. **説明**
+2. **遅デバフはヒラに付く東にH1西にH2他は安置北の安置(?))**
 
-2. **説明**
+3. **通常ボムは流砂の中  
+羽ボムは外から流砂に向けて飛ばす  
+H1 MT ST H2  
+D3 D1 D2 D4**
 
-3. **説明**
-   - 説明
-   - 説明
 </ImageLayoutSlider>
+
+## 雑魚フェーズWeeb1
+<ImageLayoutSlider
+  buttons={[
+    { label: '1', image: '/img/m6/10.png' },
+    { label: '2', image: '/img/m6/11.png' },
+          ]}
+>
+1. **MTがボスとリスをCと3に誘導  
+STが西に羊**
+
+2. **近接は羊を倒す  
+遠隔は猫を倒す  
+全員でマンタを倒す  
+リスには可能な限り  
+範囲攻撃とAoEを当てる**
+
+</ImageLayoutSlider>
+
+## 雑魚フェーズWeeb2
+<ImageLayoutSlider
+  buttons={[
+    { label: '1', image: '/img/m6/12.png' },
+    { label: '2', image: '/img/m6/13.png' },
+    { label: '3', image: '/img/m6/14.png' },
+          ]}
+>
+1. **マンタが湧くのでファーストアタックでD3とD4は線を取る**
+
+2. **STは羊が生きていれば北西に誘導  
+MTはリスを北東のマンタに連れて行く**
+
+3. **ここで2分バースト、  
+リスへのAOEのために近接の交代を検討**
+
+</ImageLayoutSlider>
+
+## 雑魚フェーズWeeb3
+<ImageLayoutSlider
+  buttons={[
+    { label: '1', image: '/img/m6/15.png' },
+    { label: '2', image: '/img/m6/16.png' },
+          ]}
+>
+1. **3回目  
+南に猫1匹  
+北に羊1匹  
+西にジャバウォック1匹
+**
+
+2. **ダメージの順序  
+ジャバウォックがスポーンする前に  
+リスをダメージダウン（1匹か2匹が死ぬべき）  
+スポーン後にジャバウォックを単体ターゲット  
+残りのリスをキル  
+猫をキル**
+
+2. **ジャバウォックがヒーラーに到達する前にキル  
+リスが全体攻撃を詠唱する前にキル  
+遠距離はメテオ詠唱前に猫をキル  
+近接はボスを攻撃（猫を攻撃できる場合を除く）**
+
+</ImageLayoutSlider>
+
+## 雑魚フェーズWeeb4
+<ImageLayoutSlider
+  buttons={[
+    { label: '1', image: '/img/m6/17.png' },
+    { label: '2', image: '/img/m6/18.png' },
+    { label: '3', image: '/img/m6/19.png' }
+          ]}
+>
+1. **4回目  
+南に猫1匹  
+南にリス2匹  
+北にジャバウォック1匹  
+北に羊1匹  
+南東と南西にマンタ2匹
+**
+
+2. **ダメージの順序  
+ジャバウォックがスポーンする前にリスをダメージダウン  
+スポーン後にジャバウォックを単体ターゲット  
+南東のマンタをキル  
+猫をキル  
+南西のマンタをキル  
+リスをキル  
+羊をキル  
+**
+
+</ImageLayoutSlider>
+
+## ランドスケープ　山と川
+<HorizontalImages
+  images={[
+    'img/m6/20.png',
+    'img/m6/21.png'
+  ]}
+  captions={[
+    '雷散開',
+    '火頭割り'
+  ]}
+/>
+
+## 雷
+<ImageLayoutSlider
+  buttons={[
+    { label: '1', image: '/img/m6/22.png' },
+    { label: '2', image: '/img/m6/23.png' },
+    { label: '3', image: '/img/m6/24.png' }
+          ]}
+>
+1. **タケノコ捨てる**
+
+2. **雷を見て  
+右にDPS  
+左にTH**
+
+</ImageLayoutSlider>
+
+
+## 塔
+<ImageLayoutSlider
+  buttons={[
+    { label: '1', image: '/img/m6/25.png' },
+    { label: '2', image: '/img/m6/26.png' },
+    { label: '3', image: '/img/m6/27.png' },
+    { label: '4', image: '/img/m6/28.png' }
+
+          ]}
+>
+1. **基本散開**
+
+2. **遠い二名に連続頭割り  
+ボスから4個奥義範囲**
+
+3. **タケノコ**
+
+4. **塔入る**
+</ImageLayoutSlider>
+
+## 塔2南
+<HorizontalImages
+  images={[
+    'img/m6/29.png',
+    'img/m6/30.png'
+  ]}
+  captions={[
+    '飛ぶ',
+    '散開'
+  ]}
+/>
+
+## 塔2北4
+<HorizontalImages
+  images={[
+    'img/m6/31.png',
+    'img/m6/32.png'
+  ]}
+  captions={[
+    '時計反時計、逆になる可能性あり',
+    '散開'
+  ]}
+/>
+
