@@ -1,35 +1,173 @@
 import ImageLayoutSlider from '@site/src/components/ImageLayoutSlider';
+import HorizontalImages from '@site/src/components/HorizontalImages';
+import ImageLayout from '@site/src/components/ImageLayout';
+import HeadingYouTubeIcon from '@site/src/components/HeadingYouTubeIcon';
 
-# [未]クルーザー級　3層
+
+# クルーザー級　3層
 
 ##  マクロ
+### 前半
 ```
-まくろ
-```
-## テンプレート
+--前半
 
+/p 【スキャッターシード一回目】
+/p     (種捨て)　　　　　　(エラプ)
+/p 　D3/MT　　 ST/D4  　近接:南内側開始→上→中央→下
+/p 　　　    　★　　　　   遠隔:D北H南開始→東西→最後中央寄せ
+/p 　H1/D1　　 D2/H2    (頭割り)MT組:西 ST組:東
+/p 【ソーンスマッシュ 】　｜ 【ブルートグラワー】
+/p ※ボス向き基準　    　   ｜  D1　　★　　D2
+/p 　　D3　 MT　 D4       ｜ 　 MT　　　ST
+/p 　　H1 　 ★ 　 H2      ｜  H1　　　　　H2
+/p 　　D1 　 ST 　D2      ｜ 　 D3　　　D4
+/p 【ソーンデスマッチ・ビルディング いしあ式】
+/p   (奇数)3回目安置  (13捨て位置)近D:④ TH:② 遠D:⑥
+/p   ①　 　MT　　②　 　H1　　③　(ペア頭割り)
+/p   　 D1　    ST   　H2　　D3　　 MTD1:①　STD2:②
+/p   ④　　 D2　　⑤　　 D4　　⑥　 H1D3:③　H2D4:⑤
+```
+
+### 後半
+```
+/p 【ソーンデスマッチ・ウォール】
+/p 　　　 MT/D3　　　　※石化視線：北西/南東避け
+/p 　　　　　　　　　　　  雑魚石化後処理
+/p H1/D1    ★　 H2/D2
+/p 　　　　 
+/p 　　　  ST/D4
+/p 【スキャッターシード二回目】※近接北西集合
+/p 近接AOE:北西から時計周り→南西安置 (遠隔)シード十字捨て 南側外周避け
+/p 遠隔AOE:最外周捨て→中央安置 (近接)シード十字内側捨て(外から2マス) 中央避け
+/p 【ウェポンツイン+ブロウシード】※一回目ボス向き 二回目ボス北基準
+/p (一回目)　　　　　　 ｜  (二回目)   ★
+/p MT/D3　 　   ST/D4 ｜　MT/D1　　    ST/D2  
+/p 　　　    ★　　　　  ｜
+/p H1/D1　　    H2/D2 ｜   H1/D3　　    H2/D4  
+```
+
+## スキャッターシード レンジ　<HeadingYouTubeIcon videoId="z3FFRdmcz_U" startTime={56} />
 <ImageLayoutSlider
   buttons={[
-    { label: '1', image: '/img/fru_p1/P1_1.png' },
-    { label: '2', image: '/img/fru_p1/P1_2.png' },
-    { 
-      label: '3',
-      subButtons: [
-        { label: '炎', image: '/img/fru_p1/P1_3_f.png' },
-        { label: '雷', image: '/img/fru_p1/P1_3_l.png' }
-      ]
-    },
-    { label: '4', image: '/img/fru_p1/P1_4.png' },
-    { label: '4', image: '/img/fru_p1/P1_2.png' }
+    { label: '1', image: '/img/m7/1.png' },
+    { label: '2', image: '/img/m7/2.png' },
+    { label: '3', image: '/img/m7/3.png' },
+    { label: '4', image: '/img/m7/4.png' },
+    { label: '5', image: '/img/m7/5.png' },
+    { label: '6', image: '/img/m7/6.png' }
+  ]}
+>
+どうがあり
+</ImageLayoutSlider>
 
+## スキャッターシード メレー　<HeadingYouTubeIcon videoId="cVgojWqULRI" startTime={13340} />
+<ImageLayoutSlider
+  buttons={[
+    { label: '1', image: '/img/m7/1.png' },
+    { label: '2', image: '/img/m7/2_1.png' },
+    { label: '3', image: '/img/m7/3_1.png' },
+    { label: '4', image: '/img/m7/4_1.png' },
+    { label: '5', image: '/img/m7/5.png' },
+    { label: '6', image: '/img/m7/6_1.png' }
+  ]}
+>
+どうがあり
+</ImageLayoutSlider>
+
+## ソーンスマッシュ
+
+<ImageLayout src="img/m7/7.png" alt="ソーンスマッシュ">
+ボス基準散開(多分変なところにいる)
+</ImageLayout>
+
+## ブルートグラワー
+まさか横長のフィールドが出ると思ってないので対応してないよ  
+みずらいかも
+<HorizontalImages 
+  images={[
+    'img/m7/8_1.png',
+    'img/m7/8_2.png'
+  ]}
+  captions={[
+    '',
+    ''
+  ]}
+/>
+
+## ソーンデスマッチ+ブルートスパーク
+
+<ImageLayout src="img/m7/9.png" alt="ソーンデスマッチ">
+</ImageLayout>
+
+## ソーンデスマッチ+ビルディング
+<ImageLayoutSlider
+  buttons={[
+    { label: '1', image: '/img/m7/10.png' },
+    { label: '2', image: '/img/m7/11.png' },
+    { label: '3', image: '/img/m7/12.png' },
+    { label: '4', image: '/img/m7/13.png' }
+  ]}
+>
+後で追記予定  
+いしあ式 日本語じゃないかも https://x.com/IshiaKun/status/1907840297767460871  
+
+  
+https://x.com/Tamadukom/status/1908101589916905834
+</ImageLayoutSlider>
+
+## ブルートグラワー
+
+<ImageLayout src="img/m7/14.png" alt="ブルートグラワー2">
+ボス見て左MT右ST
+</ImageLayout>
+
+## ソーンデスマッチ・ウォール
+<ImageLayoutSlider
+  buttons={[
+    { label: '1', image: '/img/m7/15.png' },
+    { label: '2', image: '/img/m7/16.png' },
+    { label: '3', image: '/img/m7/17.png' },
+    { label: '4', image: '/img/m7/18.png' }
   ]}
 >
 
-1. **説明**
+</ImageLayoutSlider>
 
-2. **説明**
+## ソーンデスマッチ・ウォール続き　遠隔
+<ImageLayoutSlider
+  buttons={[
+    { label: '1', image: '/img/m7/19_1.png' },
+    { label: '2', image: '/img/m7/20_1.png' },
+    { label: '3', image: '/img/m7/21_1.png' }
+  ]}
+>
 
-3. **説明**
-   - 説明
-   - 説明
+</ImageLayoutSlider>
+
+
+## ソーンデスマッチ・ウォール続き　近接
+<ImageLayoutSlider
+  buttons={[
+    { label: '1', image: '/img/m7/19_2.png' },
+    { label: '2', image: '/img/m7/20_2.png' },
+    { label: '3', image: '/img/m7/21_2.png' }
+  ]}
+>
+
+</ImageLayoutSlider>
+
+## ソーンスマッシュ
+
+<ImageLayout src="img/m7/22.png" alt="ソーンスマッシュ">
+</ImageLayout>
+
+## ブロウシード
+<ImageLayoutSlider
+  buttons={[
+    { label: '1', image: '/img/m7/23.png' },
+    { label: 'TH', image: '/img/m7/24.png' },
+    { label: 'DPS', image: '/img/m7/25.png' },
+    { label: '4', image: '/img/m7/26.png' },
+  ]}
+>
 </ImageLayoutSlider>
